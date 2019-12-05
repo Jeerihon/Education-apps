@@ -1,14 +1,14 @@
-import React, { useState } from "react"
+import React from 'react';
 
-import styles from "../styleguide.module.css"
+import styles from '../styleguide.module.css';
 
 export default () => {
-  const [binaryDigit, setBinaryDigit] = useState()
+  // const [binaryDigit, setBinaryDigit] = useState();
 
-  const handleKeyDown = event => {
-    const value = event.target.value
-    console.log(event, value)
-  }
+  const handleKeyDown = () => {
+    // const { value } = event.target.value;
+    // console.log(event, value);
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -41,5 +41,5 @@ export default () => {
         </main>
       </div>
     </div>
-  )
-}
+  );
+};
