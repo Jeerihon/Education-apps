@@ -81,17 +81,11 @@ body {
   height: 72px;
   width: 360px;
   font-size: 40px;
-  line-height: 1;
+  line-height: 72px;
   text-align: center;
   font-family: inherit;
   border: 4px solid var(--pink);
   outline: none;
-}
-
-.input::-webkit-outer-spin-button,
-.input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .input:focus {
@@ -105,8 +99,7 @@ body {
 
 .result {
   composes: input;
-  user-select: none;
-  pointer-events: none;
+  background-color: #fff;
 }
 
 @keyframes shake {

@@ -11,7 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint:js": "eslint --ext .js,jsx ."
+    "lint": "eslint --ext .js,jsx ."
   },
   "dependencies": {
     "gatsby": "^2.18.4",

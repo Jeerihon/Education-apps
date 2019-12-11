@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import styles from './index.module.css';
 
 export default () => {
-  const [decimal, setDecimal] = useState(10);
+  const [result, setResult] = useState(10);
   const [animate, setAnimate] = useState(false);
   const [isValid, setIsValid] = useState(true);
 
   const handleKeyDown = (event) => {
-    const { target: { value }, keyCode } = event;
+    const { keyCode } = event;
     const validKeyCodes = [48, 49, 37, 39, 8];
 
     if (!validKeyCodes.includes(keyCode)) {
@@ -23,8 +23,10 @@ export default () => {
     }
 
     setIsValid(true);
+  };
 
-    if (value.length === 7) setDecimal(parseInt(value, 2));
+  const handleKeyUp = ({ target: { value } }) => {
+    setResult(parseInt(+value, 2));
   };
 
   return (
@@ -36,7 +38,7 @@ export default () => {
 
         <main className={styles.content}>
           <p className={styles.description}>
-            Bin2Dec allows binary digits and then displays its decimal
+            Bin2Dec allows binary digits and then displays its result
             equivalent.
           </p>
 
@@ -47,6 +49,7 @@ export default () => {
               className={animate ? styles.inputInvalid : styles.input}
               type="text"
               onKeyDown={handleKeyDown}
+              onKeyUp={handleKeyUp}
               maxLength="8"
             />
 
@@ -56,12 +59,7 @@ export default () => {
           <div className={styles.item}>
             <span className={styles.label}>Get result:</span>
 
-            <input
-              className={styles.result}
-              type="number"
-              value={decimal}
-              readOnly
-            />
+            <span className={styles.result}>{result}</span>
           </div>
         </main>
       </div>
