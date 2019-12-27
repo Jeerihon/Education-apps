@@ -1,41 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
-
-@import "~sanitize.css";
-
-:root {
-  --gray: #f0decb;
-  --dark: #504658;
-  --light-pink: #ffb5b5;
-  --pink: #ce2e6c;
-}
-
-body,
-html {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  color: var(--dark);
-  font-family: "Press Start 2P", cursive;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color: var(--gray);
 }
 
 .container {
   max-width: 720px;
-}
-
-.header {
-  margin-bottom: 72px;
 }
 
 .title {
@@ -52,7 +23,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  background-color: var(--gray);
+  background-color: var(--blue);
 }
 
 .item {

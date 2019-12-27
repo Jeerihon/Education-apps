@@ -1,0 +1,51 @@
+:root {
+  /* COLORS */
+  --dark: #1c1c20;
+  --steelblue: #3591a4;
+  --accent: #fddb12;
+
+  --text-color: #e9e9ea;
+
+  /* SIZES */
+  --section-padding: 80px;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* TYPOGRAPHY */
+
+.font-xxl {
+  font-size: 7.594rem;
+}
+
+.font-xl {
+  font-size: 5.063rem;
+}
+
+.font-l {
+  font-size: 3.375rem;
+}
+
+.font-m {
+  font-size: 2.25rem;
+}
+
+.font-s {
+  font-size: 1rem;
+}
+
+.title-font {
+  font-family: 'Rubik', sans-serif;
+}
