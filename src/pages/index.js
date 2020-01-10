@@ -5,7 +5,6 @@ import ItemsGrid from '../components/ItemsGrid';
 
 import '../index.css';
 
-
 export default () => (
   <>
     <HeroHeader />
