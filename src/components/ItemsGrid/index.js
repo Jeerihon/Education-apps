@@ -18,7 +18,12 @@ export default () => (
     <ul className={styles.grid}>
       {APPS.map((app) => (
         <li className={styles.item}>
-          <Link to={app.route} key={app.name}>{app.name}</Link>
+          <Link
+            to={app.route}
+            key={app.name}
+          >
+            {app.name}
+          </Link>
         </li>
       ))}
     </ul>

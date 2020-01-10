@@ -9,6 +9,13 @@
 
   /* SIZES */
   --section-padding: 80px;
+
+  /* TYPOGRAPHY */
+  --font-xxl: 7.594rem;
+  --font-xl: 5.063rem;
+  --font-l: 3.375rem;
+  --font-m: 2.25rem;
+  --font-s: 1rem;
 }
 
 body,
@@ -26,27 +33,8 @@ body {
 }
 
 /* TYPOGRAPHY */
-
-.font-xxl {
-  font-size: 7.594rem;
-}
-
-.font-xl {
-  font-size: 5.063rem;
-}
-
-.font-l {
-  font-size: 3.375rem;
-}
-
-.font-m {
-  font-size: 2.25rem;
-}
-
-.font-s {
-  font-size: 1rem;
-}
-
 .title-font {
   font-family: 'Rubik', sans-serif;
 }
+
+

@@ -43,7 +43,7 @@
 }
 
 .notification {
-  compose: fontS from '../styleguide.module.css';
+  composes: fontS from '../styleguide.module.css';
   position: absolute;
   top: 100%;
   right: 30px;

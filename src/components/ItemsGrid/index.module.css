@@ -3,8 +3,9 @@
 }
 
 .grid {
+  composes: containerWidth from '../../styleguide.module.css';
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, 100px);
   grid-gap: 1rem;
   justify-items: center;
 }
@@ -12,8 +13,7 @@
 .item {
   display: flex;
   max-width: 250px;
-  height: 300px;
-  padding: 2.25rem;
+  height: 100px;
+  padding: 1em;
   background-color: var(--steelblue);
-  border-radius: 4px;
 }

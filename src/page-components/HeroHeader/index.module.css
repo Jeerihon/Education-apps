@@ -20,20 +20,20 @@
 
 .name {
   composes: titleFont from '../../styleguide.module.css';
-  composes: fontXxl from '../../styleguide.module.css';
   margin: 0;
+  font-size: var(--font-xxl);
   line-height: 1;
   text-transform: uppercase;
 }
 
 .position {
-  composes: fontM from '../../styleguide.module.css';
   margin: 0;
+  font-size: var(--font-m);
 }
 
 .description {
-  composes: fontL from '../../styleguide.module.css';
   max-width: 32rem;
+  font-size: var(--font-l);
 }
 
 .link {
