@@ -88,6 +88,33 @@
   left: -1rem;
 }
 
+.handle[data-handle=bottom-left],
+.handle[data-handle="top-left"] {
+  transform: translateX(-50%)
+}
+
+.handle[data-handle=bottom-right],
+.handle[data-handle="top-right"] {
+  transform: translateX(50%)
+}
+
+.handle[data-handle="right-top"],
+.handle[data-handle="right-bottom"],
+.handle[data-handle="left-bottom"],
+.handle[data-handle="left-top"] {
+  transform: translateY(-50%)
+}
+
+.handle[data-handle="right-top"],
+.handle[data-handle="left-top"] {
+  transform: translateY(-50%)
+}
+
+.handle[data-handle="right-bottom"],
+.handle[data-handle="left-bottom"] {
+  transform: translateY(50%)
+}
+
 .handle[data-handle="left-bottom"]:before,
 .handle[data-handle=bottom-left]:before {
   background-color: #3721ac;
@@ -119,12 +146,11 @@
   height: 45px;
   width: 100%;
   margin-top: 72px;
-  font-size: var(--font-m);
 }
 
 .copyLabel {
   margin-right: 1rem;
-  font-size: 1.5rem;
+  font-size: var(--font-s);
 }
 
 .copyText {
