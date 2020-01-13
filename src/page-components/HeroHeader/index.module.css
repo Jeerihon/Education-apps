@@ -1,0 +1,51 @@
+.hero {
+  position: relative;
+  height: 66vh;
+  padding: var(--section-padding);
+  font-size: 16px;
+  background-color: var(--dark);
+}
+
+.hero:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: white;
+  clip-path: polygon(0 100%, 0 0, 50% 100%, 100% 0, 100% 100%);
+}
+
+.name {
+  composes: titleFont from '../../styleguide.module.css';
+  margin: 0;
+  font-size: var(--font-xxl);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.position {
+  margin: 0;
+  font-size: var(--font-m);
+}
+
+.description {
+  max-width: 32rem;
+  font-size: var(--font-l);
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.idea {
+  transition: 0.5s text-shadow;
+}
+
+.link:hover > .idea {
+  text-shadow: 0px 0px 20px var(--accent);
+}

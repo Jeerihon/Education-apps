@@ -1,3 +1,14 @@
-import React from "react"
+import React from 'react';
 
-export default () => <div>Hello world!</div>
+import HeroHeader from '../page-components/HeroHeader';
+import ItemsGrid from '../components/ItemsGrid';
+
+import '../index.css';
+
+export default () => (
+  <>
+    <HeroHeader />
+
+    <ItemsGrid />
+  </>
+);

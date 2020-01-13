@@ -1,0 +1,61 @@
+:root {
+  --square-edge-width: 250px;
+}
+
+.container {
+  padding: var(--section-padding);
+}
+
+.grid {
+  composes: containerWidth from '../../styleguide.module.css';
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--square-edge-width));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.item {
+  display: flex;
+  max-width: 250px;
+  height: var(--square-edge-width);
+  width: var(--square-edge-width);
+  font-size: var(--font-m);
+  box-shadow: 0 0 5px var(--dark);
+}
+
+.link:hover > .appName {
+  opacity: 0;
+}
+
+.link:hover > .description {
+  opacity: 1;
+}
+
+.link {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.appName {
+  font-weight: bold;
+  background-image: url(../../assets/images/rainbow.svg);
+  background-repeat: repeat-x;
+  background-size: 100vw 0.2em;
+  background-position: left bottom 5px;
+  background-position-x: var(--scrollPos);
+}
+
+.description {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  font-size: var(--font-s);
+  opacity: 0;
+}
