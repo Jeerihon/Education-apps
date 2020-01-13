@@ -34,14 +34,14 @@ export default () => {
       <div className={styles.container}>
         <header className={styles.header}>
           <h1 className={styles.title}>Bin2Dec</h1>
-        </header>
 
-        <main className={styles.content}>
           <p className={styles.description}>
             Bin2Dec allows binary digits and then displays its result
             equivalent.
           </p>
+        </header>
 
+        <main className={styles.content}>
           <div className={styles.item}>
             <span className={styles.label}>Enter binary digit:</span>
 

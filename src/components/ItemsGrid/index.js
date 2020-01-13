@@ -9,7 +9,7 @@ const APPS = [{
   decription: 'Binary-to-Decimal number converter',
 }, {
   name: 'Border Radius Previewer',
-  route: '/border-radius-previewer',
+  route: '/borderRadiusPreviewer',
   decription: 'Preview how CSS3 border-radius values affect an element',
 }];
 
@@ -37,6 +37,7 @@ export default () => {
           <li className={styles.item} key={app.name}>
             <Link className={styles.link} to={app.route}>
               <span className={styles.appName}>{app.name}</span>
+
               <span className={styles.description}>{app.decription}</span>
             </Link>
           </li>

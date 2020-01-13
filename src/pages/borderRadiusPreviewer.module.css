@@ -1,0 +1,155 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--dark);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  composes: titleFont from '../styleguide.module.css';
+  composes: fontXxl from '../styleguide.module.css';
+  margin: 0;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.description {
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.previewer {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+}
+
+.shape {
+  width: 100%;
+  height: 100%;
+  background: #ff9500;
+  background-image: linear-gradient(45deg, #3023AE 0%, #ff9500 100%);
+}
+
+.handle {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.handle:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid var(--dark);
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+
+.handle[data-handle="top-left"],
+.handle[data-handle="top-right"] {
+  top: -1rem;
+}
+
+.handle[data-handle="right-top"],
+.handle[data-handle="right-bottom"] {
+  right: -1rem;
+}
+
+.handle[data-handle="bottom-right"],
+.handle[data-handle=bottom-left] {
+  bottom: -1rem;
+}
+
+.handle[data-handle="left-bottom"],
+.handle[data-handle="left-top"] {
+  left: -1rem;
+}
+
+.handle[data-handle="left-bottom"]:before,
+.handle[data-handle=bottom-left]:before {
+  background-color: #3721ac;
+}
+
+.handle[data-handle="right-top"]:before,
+.handle[data-handle="top-right"]:before {
+  background-color: #ff9500;
+}
+
+.handle[data-handle="bottom-right"]:before,
+.handle[data-handle="left-top"]:before {
+  background-color: #874d77;
+}
+
+.handle[data-handle="top-left"]:before,
+.handle[data-handle="right-bottom"]:before {
+  background-color: #a55e63;
+}
+
+.handle:hover:before {
+  box-shadow: 0 0 0 4px var(--text-color);
+  background-color: var(--steelblue);
+}
+
+.copyBar {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  width: 100%;
+  margin-top: 72px;
+  font-size: var(--font-m);
+}
+
+.copyLabel {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.copyText {
+  display: block;
+  height: 100%;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  line-height: 45px;
+  color: var(--dark);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.copyButton {
+  height: 100%;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ff9500;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.copyButton:hover {
+  background-color: #553295;
+}
